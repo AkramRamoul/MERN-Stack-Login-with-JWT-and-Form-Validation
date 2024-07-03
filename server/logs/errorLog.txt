@@ -1,0 +1,2 @@
+29/06/2024	19:06:17	71b133fd-15e6-44d7-9aac-7fb2945bffb8	Error: Not Allowed by CORS
+29/06/2024	19:06:00	33060a35-8749-41d7-b3c4-d41724a0201e	Error: Not Allowed by CORS
