@@ -9,9 +9,11 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
+
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 const REGISTER_URL = "/register";
+
 function Register() {
   const userRef = useRef();
   const errRef = useRef();
@@ -31,6 +33,7 @@ function Register() {
   useEffect(() => {
     userRef.current.focus();
   }, []);
+
   useEffect(() => {
     const result = USER_REGEX.test(user);
     console.log(result);
@@ -46,9 +49,11 @@ function Register() {
     const match = pwd === matchPwd;
     setValidMatch(match);
   }, [pwd, matchPwd]);
+
   useEffect(() => {
     setErrMsg("");
   }, [user, pwd, matchPwd]);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -108,6 +113,7 @@ function Register() {
             <input
               type="text"
               id="username"
+              className="username-input"
               ref={userRef}
               autoComplete="off"
               onChange={(e) => setUser(e.target.value)}
@@ -145,6 +151,7 @@ function Register() {
             <input
               type="password"
               id="password"
+              className="password-input"
               onChange={(e) => setPwd(e.target.value)}
               value={pwd}
               required
@@ -184,6 +191,7 @@ function Register() {
             <input
               type="password"
               id="confirm_pwd"
+              className="password-input"
               onChange={(e) => setMatchPwd(e.target.value)}
               value={matchPwd}
               required

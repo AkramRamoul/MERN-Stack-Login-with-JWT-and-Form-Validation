@@ -4,6 +4,9 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import axios from "../../api/axios";
 import useInput from "../hooks/useInput";
 import useToggle from "../hooks/useToggle";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser, faLock } from "@fortawesome/free-solid-svg-icons";
+
 const LOGIN_URL = "/auth";
 
 const Login = () => {
@@ -44,7 +47,6 @@ const Login = () => {
       console.log(JSON.stringify(response?.data));
       const accessToken = response?.data?.accessToken;
       setAuth({ user, accessToken });
-      // setUser("");
       resetUser();
       setPwd("");
       navigate(from, { replace: true });
@@ -62,14 +64,6 @@ const Login = () => {
     }
   };
 
-  // const togglePersist = () => {
-  //   setPersist((prev) => !prev);
-  // };
-
-  // useEffect(() => {
-  //   localStorage.setItem("persist", persist);
-  // }, [persist]);
-
   return (
     <section>
       <p
@@ -79,26 +73,32 @@ const Login = () => {
       >
         {errMsg}
       </p>
-      <h1>Sign In</h1>
+      <h1 className="log">Log in to your account</h1>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="username">Username:</label>
-        <input
-          type="text"
-          id="username"
-          ref={userRef}
-          autoComplete="off"
-          {...userattributes}
-          required
-        />
+        <label htmlFor="username">Username</label>
+        <div className="inputContainer">
+          <FontAwesomeIcon icon={faUser} className="icon" size="sm" />
+          <input
+            type="text"
+            id="username"
+            ref={userRef}
+            autoComplete="off"
+            {...userattributes}
+            required
+          />
+        </div>
 
-        <label htmlFor="password">Password:</label>
-        <input
-          type="password"
-          id="password"
-          onChange={(e) => setPwd(e.target.value)}
-          value={pwd}
-          required
-        />
+        <label htmlFor="password">Password</label>
+        <div className="inputContainer">
+          <FontAwesomeIcon icon={faLock} className="icon" size="sm" />
+          <input
+            type="password"
+            id="password"
+            onChange={(e) => setPwd(e.target.value)}
+            value={pwd}
+            required
+          />
+        </div>
         <button>Sign In</button>
         <div className="persistCheck">
           <input

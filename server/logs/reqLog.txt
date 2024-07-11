@@ -604,3 +604,11 @@
 03/07/2024	21:07:55	281e14e6-f5e8-49b4-b773-42409cdb32a2	GET	http://localhost:5173	/users
 03/07/2024	21:07:03	281e14e6-f5e8-49b4-b773-42409cdb32a2	OPTIONS	http://localhost:5173	/users
 03/07/2024	21:07:03	281e14e6-f5e8-49b4-b773-42409cdb32a2	GET	http://localhost:5173	/users
+11/07/2024	14:07:09	f6dee76c-a26f-401e-a1e6-a4efd04a3ae0	GET	http://localhost:5173	/refresh
+11/07/2024	14:07:09	f6dee76c-a26f-401e-a1e6-a4efd04a3ae0	GET	http://localhost:5173	/refresh
+11/07/2024	15:07:15	f6dee76c-a26f-401e-a1e6-a4efd04a3ae0	OPTIONS	http://localhost:5173	/register
+11/07/2024	15:07:15	f6dee76c-a26f-401e-a1e6-a4efd04a3ae0	POST	http://localhost:5173	/register
+11/07/2024	15:07:18	f6dee76c-a26f-401e-a1e6-a4efd04a3ae0	GET	http://localhost:5173	/refresh
+11/07/2024	15:07:18	f6dee76c-a26f-401e-a1e6-a4efd04a3ae0	GET	http://localhost:5173	/refresh
+11/07/2024	15:07:24	f6dee76c-a26f-401e-a1e6-a4efd04a3ae0	OPTIONS	http://localhost:5173	/auth
+11/07/2024	15:07:24	f6dee76c-a26f-401e-a1e6-a4efd04a3ae0	POST	http://localhost:5173	/auth

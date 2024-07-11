@@ -14,7 +14,7 @@ html {
 
 body {
   min-height: 100vh;
-  background-color: dodgerblue;
+  background-color: rgb(97, 72, 137);
 }
 
 .App {
@@ -27,14 +27,22 @@ body {
 }
 
 section {
+  border-radius: 2%;
   width: 100%;
-  max-width: 420px;
-  min-height: 400px;
+  max-width: 600px;
+  min-width: 500px; /* Set a minimum width */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   padding: 1rem;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: whitesmoke;
+  color: rgb(104, 134, 165);
+  transition: all 0.3s ease-in-out; /* Smooth transition for size changes */
+}
+
+h1,
+p {
+  text-align: center;
 }
 
 form {
@@ -43,21 +51,36 @@ form {
   justify-content: space-evenly;
   flex-grow: 1;
   padding-bottom: 1rem;
+  min-height: 400px;
 }
 
 a,
 a:visited {
-  color: #fff;
+  color: #2905ae;
 }
 
-input[type="text"],
-input[type="password"],
-button,
-textarea {
+.inputContainer {
+  position: relative;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.inputContainer .icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: rgb(121, 88, 159);
+}
+
+.inputContainer input[type="text"],
+.inputContainer input[type="password"] {
+  width: 100%;
+  padding: 0.5rem 0.5rem 0.5rem 2.5rem;
   font-family: "Nunito", sans-serif;
   font-size: 22px;
-  padding: 0.25rem;
-  border-radius: 0.5rem;
+  border: 2px solid rgb(104, 134, 165);
+  border-radius: 0.25rem;
 }
 
 label,
@@ -66,7 +89,18 @@ button {
 }
 
 button {
+  font-size: 18px;
+  font-weight: normal;
   padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: 2px solid rgb(104, 134, 165);
+  background-color: rgb(126, 79, 137);
+  color: #fff;
+}
+
+label {
+  font-weight: bold;
+  font-size: 14px;
 }
 
 .instructions {
@@ -119,4 +153,18 @@ button {
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
+}
+
+.log {
+  font-weight: 100;
+}
+
+.username-input,
+.password-input {
+  width: 100%;
+  padding: 0.5rem 0.5rem 0.5rem;
+  font-family: "Nunito", sans-serif;
+  font-size: 22px;
+  border: 2px solid rgb(104, 134, 165);
+  border-radius: 0.25rem;
 }
